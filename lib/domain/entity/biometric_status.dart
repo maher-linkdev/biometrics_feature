@@ -14,4 +14,6 @@ enum AppBiometricType {
   fingerprint,
   face,
   iris,
+  strong,
+  weak
 } 

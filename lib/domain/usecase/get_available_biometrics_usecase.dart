@@ -1,12 +1,12 @@
 import 'package:biometrics_feature/domain/entity/biometric_status.dart';
 import 'package:biometrics_feature/domain/repository/biometric_repository.dart';
 
-class CheckBiometricStatusUseCase {
+class GetAvailableBiometricsUseCase {
   final BiometricRepository _repository;
 
-  CheckBiometricStatusUseCase(this._repository);
+  GetAvailableBiometricsUseCase(this._repository);
 
-  Future<BiometricStatus> call() async {
-    return await _repository.checkBiometricStatus();
+  Future<List<AppBiometricType>> call() async {
+    return await _repository.getAvailableBiometrics();
   }
-} 
+}
